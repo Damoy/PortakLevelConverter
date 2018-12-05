@@ -1,0 +1,47 @@
+# 00 = player
+# 01 = classic tiles
+# 02 = wall
+# 03 = RightEnemy
+# 04 = LeftEnemy
+# 05 = UpEnemy
+# 06 = DownEnemy
+# 71 - 90 = power
+# 08 = portal
+# 09 = destructible wall
+# 4* = door
+# 5* = key 
+# Key 52 open door 42 
+# 15 tiles width (90060)
+# 10 tiles height (704) (with UI 9)
+# level data is map organisation
+# config is additional level configuration information
+
+##levelData
+02 02 02 02 02 02 02 02 02 02 02 02 02 02 02
+00 01 01 01 01 06 01 02 01 06 01 01 01 45 08
+02 02 01 01 01 01 53 02 54 01 01 01 01 02 02
+02 03 01 01 01 01 05 02 05 01 01 01 01 04 02
+02 02 05 01 01 01 02 02 02 01 01 01 05 02 02
+02 02 02 01 01 01 42 51 40 01 01 01 02 02 02
+02 03 90 01 01 01 02 02 02 01 01 01 01 04 02
+02 02 02 01 01 02 02 02 02 02 01 01 02 02 02
+02 50 41 01 90 43 52 02 55 44 90 01 09 90 02
+02 02 02 02 02 02 02 02 02 02 02 02 02 02 02
+##levelData
+
+##numberOfTiles
+10
+15
+##numberOfTiles
+
+##powerAmount
+15
+##powerAmount
+
+##levelName
+The Mirror
+##levelName
+
+##levelId
+9
+##levelId
