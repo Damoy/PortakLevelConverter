@@ -110,7 +110,7 @@ public final class JsonConverter {
 					keys.add(new Key(keyId, row, col, doorIds));
 				}
 				else if(nextInt >= 71 && nextInt <= 90) {
-					energies.add(new Energy(row, col, nextInt));
+					energies.add(new Energy(row, col, nextInt % 70));
 				} else {
 					switch(nextInt) {
 						case 0:

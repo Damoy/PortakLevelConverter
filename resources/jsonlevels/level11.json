@@ -17,32 +17,32 @@
     {
       "row": 3,
       "col": 2,
-      "value": 90
+      "value": 20
     },
     {
       "row": 3,
       "col": 3,
-      "value": 90
+      "value": 20
     },
     {
       "row": 3,
       "col": 4,
-      "value": 90
+      "value": 20
     },
     {
       "row": 3,
       "col": 13,
-      "value": 90
+      "value": 20
     },
     {
       "row": 7,
       "col": 3,
-      "value": 90
+      "value": 20
     },
     {
       "row": 7,
       "col": 13,
-      "value": 90
+      "value": 20
     }
   ],
   "doors": [
