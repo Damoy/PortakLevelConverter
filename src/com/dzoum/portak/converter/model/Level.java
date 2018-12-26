@@ -18,6 +18,7 @@ public class Level {
 	public List<DestructibleWall> destructibleWalls;
 	public List<Zombie> zombies;
 	public List<Tile> emptyTiles;
+	public List<Portal> fakePortals;
 	
 	public Level() {
 		
@@ -25,7 +26,8 @@ public class Level {
 
 	public Level(int id, String name, int rows, int cols, int playerBasePowerAmount, Player player, Portal portal,
 			List<Energy> energies, List<Door> doors, List<Key> keys, List<Wall> walls,
-			List<DestructibleWall> destructibleWalls, List<Zombie> zombies, List<Tile> emptyTiles) {
+			List<DestructibleWall> destructibleWalls, List<Zombie> zombies, List<Tile> emptyTiles,
+			List<Portal> fakePortals) {
 		this.id = id;
 		this.name = name;
 		this.rows = rows;
@@ -40,6 +42,7 @@ public class Level {
 		this.destructibleWalls = destructibleWalls;
 		this.zombies = zombies;
 		this.emptyTiles = emptyTiles;
+		this.fakePortals = fakePortals;
 	}
 
 	public int getId() {
@@ -152,6 +155,14 @@ public class Level {
 
 	public void setEmptyTiles(List<Tile> emptyTiles) {
 		this.emptyTiles = emptyTiles;
+	}
+
+	public List<Portal> getFakePortals() {
+		return fakePortals;
+	}
+
+	public void setFakePortals(List<Portal> fakePortals) {
+		this.fakePortals = fakePortals;
 	}
 	
 }

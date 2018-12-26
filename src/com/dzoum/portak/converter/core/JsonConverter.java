@@ -75,6 +75,7 @@ public final class JsonConverter {
 		List<DestructibleWall> destructibleWalls = new ArrayList<>();
 		List<Zombie> zombies = new ArrayList<>();
 		List<Tile> emptyTiles = new ArrayList<>();
+		List<Portal> fakePortals = null;
 		
 		Map<Integer, List<Integer>> keyMapping = new HashMap<>();
 		
@@ -111,6 +112,13 @@ public final class JsonConverter {
 				}
 				else if(nextInt >= 71 && nextInt <= 90) {
 					energies.add(new Energy(row, col, nextInt % 70));
+				} else if(nextInt >= 95 && nextInt <= 99) {
+					if(fakePortals == null) {
+						fakePortals = new ArrayList<>();
+					}
+					
+					// # 95 - 99 = Fake portals
+					fakePortals.add(new Portal(-nextInt % 10, row, col));
 				} else {
 					switch(nextInt) {
 						case 0:
@@ -157,7 +165,7 @@ public final class JsonConverter {
 		
 		return new Level(levelId, levelName, rows, cols, powerAmount, player,
 				portal, energies, doors, keys, walls, destructibleWalls,
-				zombies, emptyTiles);
+				zombies, emptyTiles, fakePortals);
 	}
 	
 	private static String convertLevelToJson(Level level) {

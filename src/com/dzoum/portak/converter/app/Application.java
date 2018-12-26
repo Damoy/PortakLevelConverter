@@ -8,10 +8,11 @@ import com.dzoum.portak.converter.utils.Output;
 public class Application {
 
 	public static void main(String[] args) {
-		// convertFile("level0.lvl");
+		// convertFile("level12.lvl");
 		convertAllRawLevelsToJsonFormat();
 	}
 	
+	@SuppressWarnings("unused")
 	private static void convertFile(String filePath) {
 		File file = new File("./resources/rawlevels/" + filePath);
 		Output.toFile("./resources/jsonlevels/" + file.getName().split(".lvl")[0] + ".json",
