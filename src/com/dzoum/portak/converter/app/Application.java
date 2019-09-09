@@ -14,18 +14,20 @@ public class Application {
 	
 	@SuppressWarnings("unused")
 	private static void convertFile(String filePath) {
+		String destFolderPath = "./resources/jsonlevels/raw/";
 		File file = new File("./resources/rawlevels/" + filePath);
-		Output.toFile("./resources/jsonlevels/" + file.getName().split(".lvl")[0] + ".json",
+		Output.toFile(destFolderPath, destFolderPath + file.getName().split(".lvl")[0] + ".json",
 				JsonConverter.convertLvlFileToJson(file.getPath()));
 	}
 	
 	private static void convertAllRawLevelsToJsonFormat() {
 		File folder = new File("./resources/rawlevels");
 		File[] lvlFiles = folder.listFiles();
+		String destFolderPath = "./resources/jsonlevels/raw/";
 
 		for(int i = 0; i < lvlFiles.length; ++i) {
 			if(lvlFiles[i].isFile()) {
-				Output.toFile("./resources/jsonlevels/" + lvlFiles[i].getName().split(".lvl")[0] + ".json",
+				Output.toFile(destFolderPath, destFolderPath + lvlFiles[i].getName().split(".lvl")[0] + ".json",
 						JsonConverter.convertLvlFileToJson(lvlFiles[i].getPath()));
 			}
 		}

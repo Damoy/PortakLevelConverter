@@ -11,9 +11,12 @@ public final class Output {
 		System.out.print(s);
 	}
 	
-	public static void toFile(String filePath, String content) {
+	public static void toFile(String folderPath, String filePath, String content) {
 		try {
-			BufferedWriter bw = new BufferedWriter(new FileWriter(new File(filePath)));
+			File folder = new File(folderPath);
+			folder.mkdirs();
+			File file = new File(filePath);
+			BufferedWriter bw = new BufferedWriter(new FileWriter(file));
 			bw.write(content);
 			bw.close();
 		} catch (IOException e) {
